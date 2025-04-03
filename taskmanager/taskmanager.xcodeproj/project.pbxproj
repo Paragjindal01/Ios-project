@@ -6,81 +6,76 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		AE8641F22D9E14E00062B99E /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = AE8641F12D9E14E00062B99E /* SQLite */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
-		AE86418C2D9E11520062B99E /* PBXContainerItemProxy */ = {
+		AEB29B5A2D9E292D004F8892 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AE86416D2D9E11510062B99E /* Project object */;
+			containerPortal = AEB29B3B2D9E292C004F8892 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AE8641742D9E11510062B99E;
+			remoteGlobalIDString = AEB29B422D9E292C004F8892;
 			remoteInfo = taskmanager;
 		};
-		AE8641962D9E11520062B99E /* PBXContainerItemProxy */ = {
+		AEB29B642D9E292D004F8892 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AE86416D2D9E11510062B99E /* Project object */;
+			containerPortal = AEB29B3B2D9E292C004F8892 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AE8641742D9E11510062B99E;
+			remoteGlobalIDString = AEB29B422D9E292C004F8892;
 			remoteInfo = taskmanager;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AE8641752D9E11510062B99E /* taskmanager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taskmanager.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE86418B2D9E11520062B99E /* taskmanagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taskmanagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE8641952D9E11520062B99E /* taskmanagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taskmanagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB29B432D9E292C004F8892 /* taskmanager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taskmanager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB29B592D9E292D004F8892 /* taskmanagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taskmanagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB29B632D9E292D004F8892 /* taskmanagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taskmanagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		AE8641E92D9E13F10062B99E /* Exceptions for "taskmanager" folder in "taskmanager" target */ = {
+		AEB29B6B2D9E292D004F8892 /* Exceptions for "taskmanager" folder in "taskmanager" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = AE8641742D9E11510062B99E /* taskmanager */;
+			target = AEB29B422D9E292C004F8892 /* taskmanager */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		AE86418E2D9E11520062B99E /* taskmanagerTests */ = {
+		AEB29B452D9E292C004F8892 /* taskmanager */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AEB29B6B2D9E292D004F8892 /* Exceptions for "taskmanager" folder in "taskmanager" target */,
+			);
+			path = taskmanager;
+			sourceTree = "<group>";
+		};
+		AEB29B5C2D9E292D004F8892 /* taskmanagerTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = taskmanagerTests;
 			sourceTree = "<group>";
 		};
-		AE8641982D9E11520062B99E /* taskmanagerUITests */ = {
+		AEB29B662D9E292D004F8892 /* taskmanagerUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = taskmanagerUITests;
-			sourceTree = "<group>";
-		};
-		AE8641DF2D9E13F10062B99E /* taskmanager */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				AE8641E92D9E13F10062B99E /* Exceptions for "taskmanager" folder in "taskmanager" target */,
-			);
-			path = taskmanager;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AE8641722D9E11510062B99E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AE8641F22D9E14E00062B99E /* SQLite in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE8641882D9E11520062B99E /* Frameworks */ = {
+		AEB29B402D9E292C004F8892 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE8641922D9E11520062B99E /* Frameworks */ = {
+		AEB29B562D9E292D004F8892 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEB29B602D9E292D004F8892 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -90,22 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AE86416C2D9E11510062B99E = {
+		AEB29B3A2D9E292C004F8892 = {
 			isa = PBXGroup;
 			children = (
-				AE86418E2D9E11520062B99E /* taskmanagerTests */,
-				AE8641982D9E11520062B99E /* taskmanagerUITests */,
-				AE8641762D9E11510062B99E /* Products */,
-				AE8641DF2D9E13F10062B99E /* taskmanager */,
+				AEB29B452D9E292C004F8892 /* taskmanager */,
+				AEB29B5C2D9E292D004F8892 /* taskmanagerTests */,
+				AEB29B662D9E292D004F8892 /* taskmanagerUITests */,
+				AEB29B442D9E292C004F8892 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AE8641762D9E11510062B99E /* Products */ = {
+		AEB29B442D9E292C004F8892 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AE8641752D9E11510062B99E /* taskmanager.app */,
-				AE86418B2D9E11520062B99E /* taskmanagerTests.xctest */,
-				AE8641952D9E11520062B99E /* taskmanagerUITests.xctest */,
+				AEB29B432D9E292C004F8892 /* taskmanager.app */,
+				AEB29B592D9E292D004F8892 /* taskmanagerTests.xctest */,
+				AEB29B632D9E292D004F8892 /* taskmanagerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,138 +108,134 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AE8641742D9E11510062B99E /* taskmanager */ = {
+		AEB29B422D9E292C004F8892 /* taskmanager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE86419E2D9E11520062B99E /* Build configuration list for PBXNativeTarget "taskmanager" */;
+			buildConfigurationList = AEB29B6C2D9E292D004F8892 /* Build configuration list for PBXNativeTarget "taskmanager" */;
 			buildPhases = (
-				AE8641712D9E11510062B99E /* Sources */,
-				AE8641722D9E11510062B99E /* Frameworks */,
-				AE8641732D9E11510062B99E /* Resources */,
+				AEB29B3F2D9E292C004F8892 /* Sources */,
+				AEB29B402D9E292C004F8892 /* Frameworks */,
+				AEB29B412D9E292C004F8892 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				AE8641DF2D9E13F10062B99E /* taskmanager */,
+				AEB29B452D9E292C004F8892 /* taskmanager */,
 			);
 			name = taskmanager;
 			packageProductDependencies = (
-				AE8641F12D9E14E00062B99E /* SQLite */,
 			);
 			productName = taskmanager;
-			productReference = AE8641752D9E11510062B99E /* taskmanager.app */;
+			productReference = AEB29B432D9E292C004F8892 /* taskmanager.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AE86418A2D9E11520062B99E /* taskmanagerTests */ = {
+		AEB29B582D9E292D004F8892 /* taskmanagerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE8641A32D9E11520062B99E /* Build configuration list for PBXNativeTarget "taskmanagerTests" */;
+			buildConfigurationList = AEB29B712D9E292D004F8892 /* Build configuration list for PBXNativeTarget "taskmanagerTests" */;
 			buildPhases = (
-				AE8641872D9E11520062B99E /* Sources */,
-				AE8641882D9E11520062B99E /* Frameworks */,
-				AE8641892D9E11520062B99E /* Resources */,
+				AEB29B552D9E292D004F8892 /* Sources */,
+				AEB29B562D9E292D004F8892 /* Frameworks */,
+				AEB29B572D9E292D004F8892 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AE86418D2D9E11520062B99E /* PBXTargetDependency */,
+				AEB29B5B2D9E292D004F8892 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				AE86418E2D9E11520062B99E /* taskmanagerTests */,
+				AEB29B5C2D9E292D004F8892 /* taskmanagerTests */,
 			);
 			name = taskmanagerTests;
 			packageProductDependencies = (
 			);
 			productName = taskmanagerTests;
-			productReference = AE86418B2D9E11520062B99E /* taskmanagerTests.xctest */;
+			productReference = AEB29B592D9E292D004F8892 /* taskmanagerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AE8641942D9E11520062B99E /* taskmanagerUITests */ = {
+		AEB29B622D9E292D004F8892 /* taskmanagerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE8641A62D9E11520062B99E /* Build configuration list for PBXNativeTarget "taskmanagerUITests" */;
+			buildConfigurationList = AEB29B742D9E292D004F8892 /* Build configuration list for PBXNativeTarget "taskmanagerUITests" */;
 			buildPhases = (
-				AE8641912D9E11520062B99E /* Sources */,
-				AE8641922D9E11520062B99E /* Frameworks */,
-				AE8641932D9E11520062B99E /* Resources */,
+				AEB29B5F2D9E292D004F8892 /* Sources */,
+				AEB29B602D9E292D004F8892 /* Frameworks */,
+				AEB29B612D9E292D004F8892 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AE8641972D9E11520062B99E /* PBXTargetDependency */,
+				AEB29B652D9E292D004F8892 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				AE8641982D9E11520062B99E /* taskmanagerUITests */,
+				AEB29B662D9E292D004F8892 /* taskmanagerUITests */,
 			);
 			name = taskmanagerUITests;
 			packageProductDependencies = (
 			);
 			productName = taskmanagerUITests;
-			productReference = AE8641952D9E11520062B99E /* taskmanagerUITests.xctest */;
+			productReference = AEB29B632D9E292D004F8892 /* taskmanagerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AE86416D2D9E11510062B99E /* Project object */ = {
+		AEB29B3B2D9E292C004F8892 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					AE8641742D9E11510062B99E = {
+					AEB29B422D9E292C004F8892 = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					AE86418A2D9E11520062B99E = {
+					AEB29B582D9E292D004F8892 = {
 						CreatedOnToolsVersion = 16.2;
-						TestTargetID = AE8641742D9E11510062B99E;
+						TestTargetID = AEB29B422D9E292C004F8892;
 					};
-					AE8641942D9E11520062B99E = {
+					AEB29B622D9E292D004F8892 = {
 						CreatedOnToolsVersion = 16.2;
-						TestTargetID = AE8641742D9E11510062B99E;
+						TestTargetID = AEB29B422D9E292C004F8892;
 					};
 				};
 			};
-			buildConfigurationList = AE8641702D9E11510062B99E /* Build configuration list for PBXProject "taskmanager" */;
+			buildConfigurationList = AEB29B3E2D9E292C004F8892 /* Build configuration list for PBXProject "taskmanager" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = AE86416C2D9E11510062B99E;
+			mainGroup = AEB29B3A2D9E292C004F8892;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-				AE8641A92D9E117B0062B99E /* XCRemoteSwiftPackageReference "SQLite.swift" */,
-			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = AE8641762D9E11510062B99E /* Products */;
+			productRefGroup = AEB29B442D9E292C004F8892 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AE8641742D9E11510062B99E /* taskmanager */,
-				AE86418A2D9E11520062B99E /* taskmanagerTests */,
-				AE8641942D9E11520062B99E /* taskmanagerUITests */,
+				AEB29B422D9E292C004F8892 /* taskmanager */,
+				AEB29B582D9E292D004F8892 /* taskmanagerTests */,
+				AEB29B622D9E292D004F8892 /* taskmanagerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AE8641732D9E11510062B99E /* Resources */ = {
+		AEB29B412D9E292C004F8892 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE8641892D9E11520062B99E /* Resources */ = {
+		AEB29B572D9E292D004F8892 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE8641932D9E11520062B99E /* Resources */ = {
+		AEB29B612D9E292D004F8892 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,21 +245,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AE8641712D9E11510062B99E /* Sources */ = {
+		AEB29B3F2D9E292C004F8892 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE8641872D9E11520062B99E /* Sources */ = {
+		AEB29B552D9E292D004F8892 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE8641912D9E11520062B99E /* Sources */ = {
+		AEB29B5F2D9E292D004F8892 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -278,20 +269,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AE86418D2D9E11520062B99E /* PBXTargetDependency */ = {
+		AEB29B5B2D9E292D004F8892 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AE8641742D9E11510062B99E /* taskmanager */;
-			targetProxy = AE86418C2D9E11520062B99E /* PBXContainerItemProxy */;
+			target = AEB29B422D9E292C004F8892 /* taskmanager */;
+			targetProxy = AEB29B5A2D9E292D004F8892 /* PBXContainerItemProxy */;
 		};
-		AE8641972D9E11520062B99E /* PBXTargetDependency */ = {
+		AEB29B652D9E292D004F8892 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AE8641742D9E11510062B99E /* taskmanager */;
-			targetProxy = AE8641962D9E11520062B99E /* PBXContainerItemProxy */;
+			target = AEB29B422D9E292C004F8892 /* taskmanager */;
+			targetProxy = AEB29B642D9E292D004F8892 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		AE86419F2D9E11520062B99E /* Debug */ = {
+		AEB29B6D2D9E292D004F8892 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -312,13 +303,16 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.COSCParag.taskmanager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		AE8641A02D9E11520062B99E /* Release */ = {
+		AEB29B6E2D9E292D004F8892 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -339,13 +333,16 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.COSCParag.taskmanager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		AE8641A12D9E11520062B99E /* Debug */ = {
+		AEB29B6F2D9E292D004F8892 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -408,7 +405,7 @@
 			};
 			name = Debug;
 		};
-		AE8641A22D9E11520062B99E /* Release */ = {
+		AEB29B702D9E292D004F8892 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -464,7 +461,7 @@
 			};
 			name = Release;
 		};
-		AE8641A42D9E11520062B99E /* Debug */ = {
+		AEB29B722D9E292D004F8892 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -482,7 +479,7 @@
 			};
 			name = Debug;
 		};
-		AE8641A52D9E11520062B99E /* Release */ = {
+		AEB29B732D9E292D004F8892 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -500,7 +497,7 @@
 			};
 			name = Release;
 		};
-		AE8641A72D9E11520062B99E /* Debug */ = {
+		AEB29B752D9E292D004F8892 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -516,7 +513,7 @@
 			};
 			name = Debug;
 		};
-		AE8641A82D9E11520062B99E /* Release */ = {
+		AEB29B762D9E292D004F8892 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -535,62 +532,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AE8641702D9E11510062B99E /* Build configuration list for PBXProject "taskmanager" */ = {
+		AEB29B3E2D9E292C004F8892 /* Build configuration list for PBXProject "taskmanager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE8641A12D9E11520062B99E /* Debug */,
-				AE8641A22D9E11520062B99E /* Release */,
+				AEB29B6F2D9E292D004F8892 /* Debug */,
+				AEB29B702D9E292D004F8892 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE86419E2D9E11520062B99E /* Build configuration list for PBXNativeTarget "taskmanager" */ = {
+		AEB29B6C2D9E292D004F8892 /* Build configuration list for PBXNativeTarget "taskmanager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE86419F2D9E11520062B99E /* Debug */,
-				AE8641A02D9E11520062B99E /* Release */,
+				AEB29B6D2D9E292D004F8892 /* Debug */,
+				AEB29B6E2D9E292D004F8892 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE8641A32D9E11520062B99E /* Build configuration list for PBXNativeTarget "taskmanagerTests" */ = {
+		AEB29B712D9E292D004F8892 /* Build configuration list for PBXNativeTarget "taskmanagerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE8641A42D9E11520062B99E /* Debug */,
-				AE8641A52D9E11520062B99E /* Release */,
+				AEB29B722D9E292D004F8892 /* Debug */,
+				AEB29B732D9E292D004F8892 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE8641A62D9E11520062B99E /* Build configuration list for PBXNativeTarget "taskmanagerUITests" */ = {
+		AEB29B742D9E292D004F8892 /* Build configuration list for PBXNativeTarget "taskmanagerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE8641A72D9E11520062B99E /* Debug */,
-				AE8641A82D9E11520062B99E /* Release */,
+				AEB29B752D9E292D004F8892 /* Debug */,
+				AEB29B762D9E292D004F8892 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		AE8641A92D9E117B0062B99E /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.15.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		AE8641F12D9E14E00062B99E /* SQLite */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AE8641A92D9E117B0062B99E /* XCRemoteSwiftPackageReference "SQLite.swift" */;
-			productName = SQLite;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = AE86416D2D9E11510062B99E /* Project object */;
+	rootObject = AEB29B3B2D9E292C004F8892 /* Project object */;
 }
