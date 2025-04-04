@@ -4,7 +4,7 @@ class APIService {
     static let shared = APIService()
     
     // Base URL of your Node.js API - update this when deploying
-    private let baseURL = "http://localhost:3000/api"
+     let baseURL = "http://localhost:3000/api"
     
     private init() {}
     

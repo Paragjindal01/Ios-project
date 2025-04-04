@@ -8,27 +8,38 @@ struct TaskListView: View {
     @State private var showAddTaskSheet = false
     @State private var selectedTaskColor = 0
     @State private var animateList = false
+    @State private var showCalendar = false
+    @State private var selectedDate = Date()
     
+    // New state to control welcome banner visibility
+    @State private var showBanner = true
+
     // Color themes for tasks
     let taskColorThemes: [[Color]] = [
         [.blue, .blue.opacity(0.15)],               // Blue theme
-        [.purple, .purple.opacity(0.15)],           // Purple theme
-        [.green, .green.opacity(0.15)],             // Green theme
-        [.orange, .orange.opacity(0.15)],           // Orange theme
-        [.pink, .pink.opacity(0.15)],               // Pink theme
-        [.teal, .teal.opacity(0.15)],               // Teal theme
-        [.indigo, .indigo.opacity(0.15)]            // Indigo theme
+        [.purple, .purple.opacity(0.15)],             // Purple theme
+        [.green, .green.opacity(0.15)],               // Green theme
+        [.orange, .orange.opacity(0.15)],             // Orange theme
+        [.pink, .pink.opacity(0.15)],                 // Pink theme
+        [.teal, .teal.opacity(0.15)],                 // Teal theme
+        [.indigo, .indigo.opacity(0.15)]              // Indigo theme
     ]
     
     var body: some View {
         NavigationView {
             ZStack {
-                // Background with subtle pattern
-                Color(.systemGroupedBackground)
+                // Background with light blue color
+                Color(red: 0.85, green: 0.95, blue: 1.0)
                     .edgesIgnoringSafeArea(.all)
                 
                 // Main content
                 VStack {
+                    // Conditionally show the welcome banner
+                    if showBanner {
+                        welcomeBanner
+                            
+                    }
+                    
                     if isLoading {
                         LoadingView()
                     } else if let errorMessage = errorMessage {
@@ -42,34 +53,22 @@ struct TaskListView: View {
                 .navigationTitle("My Tasks")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
-                        Text("\(tasks.count) Tasks")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
+                        // App Logo on left side
+                        Image(systemName: "checklist.checked")
+                            .font(.system(size: 24, weight: .bold))
+                            .foregroundColor(.green)
                     }
                     
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
-                            fetchTasks()
-                            withAnimation {
-                                animateList = true
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    animateList = false
-                                }
-                            }
+                            showCalendar.toggle()
                         }) {
-                            Image(systemName: "arrow.clockwise")
-                                .rotationEffect(.degrees(animateList ? 360 : 0))
-                                .animation(animateList ? Animation.linear(duration: 0.5) : .default, value: animateList)
-                        }
-                    }
-                    
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button(action: {
-                            showAddTaskSheet = true
-                        }) {
-                            Image(systemName: "plus.circle.fill")
+                            Image(systemName: "calendar")
+                                .font(.system(size: 22))
                                 .foregroundColor(.blue)
-                                .font(.system(size: 24))
+                        }
+                        .popover(isPresented: $showCalendar) {
+                            calendarView
                         }
                     }
                 }
@@ -90,7 +89,92 @@ struct TaskListView: View {
         }
         .onAppear {
             fetchTasks()
+            // Hide the welcome banner after 3 seconds
+        
+            
         }
+    }
+    
+    // Welcome banner view
+    private var welcomeBanner: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            // Dynamic greeting based on time of day
+            Text(dynamicGreeting())
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(.blue)
+            
+            HStack {
+                Text("Ready to crush your tasks today?")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                
+                Spacer()
+                
+                Image(systemName: "sparkles")
+                    .foregroundColor(.yellow)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.white)
+                    .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 4)
+        )
+        .padding(.horizontal)
+        .padding(.top, 8)
+        // Entrance animation
+        .transition(.asymmetric(
+            insertion: .move(edge: .top).combined(with: .opacity),
+            removal: .move(edge: .top).combined(with: .opacity)
+        ))
+    }
+    private func dynamicGreeting() -> String {
+        let hour = Calendar.current.component(.hour, from: Date())
+        
+        switch hour {
+        case 5..<12:
+            return "Good Morning!"
+        case 12..<17:
+            return "Good Afternoon!"
+        case 17..<22:
+            return "Good Evening!"
+        default:
+            return "Hello!"
+        }
+    }
+
+    // Calendar popover view
+    private var calendarView: some View {
+        VStack {
+            DatePicker(
+                "Select Date",
+                selection: $selectedDate,
+                displayedComponents: [.date]
+            )
+            .datePickerStyle(GraphicalDatePickerStyle())
+            .padding()
+            
+            Divider()
+            
+            Button(action: {
+                // Filter tasks by selected date (placeholder functionality)
+                showCalendar = false
+                // In a real app, you would filter tasks based on the selected date
+            }) {
+                Text("View Tasks for Selected Date")
+                    .font(.headline)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .padding(.horizontal)
+            }
+            .padding(.bottom)
+        }
+        .frame(width: 350, height: 450)
     }
     
     // Task list with animations and colors
@@ -196,9 +280,7 @@ struct TaskListView: View {
     }
 }
 
-// MARK: - Supporting Views
-
-// Enhanced task row with color themes and animations
+// Rest of the supporting views remain unchanged
 struct TaskRowEnhanced: View {
     let task: Task
     let onToggle: () -> Void
@@ -300,7 +382,7 @@ struct LoadingView: View {
     }
 }
 
-// Empty state view
+// Empty state view with updated design
 struct EmptyStateView: View {
     @Binding var showAddTaskSheet: Bool
     @State private var isAnimating = false
@@ -342,10 +424,15 @@ struct EmptyStateView: View {
             .padding(.top, 10)
         }
         .padding(40)
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.white)
+                .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 5)
+        )
     }
 }
 
-// Error view
+// Error view with refreshed design
 struct ErrorView: View {
     let message: String
     let retryAction: () -> Void
@@ -388,7 +475,7 @@ struct ErrorView: View {
     }
 }
 
-// Add task sheet view
+// Add task sheet view with improved design
 struct AddTaskSheetView: View {
     let colorThemes: [[Color]]
     @Binding var selectedColor: Int
@@ -396,6 +483,8 @@ struct AddTaskSheetView: View {
     
     @State private var title = ""
     @State private var description = ""
+    @State private var dueDate = Date()
+    @State private var showDatePicker = false
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -407,6 +496,25 @@ struct AddTaskSheetView: View {
                     
                     TextField("Description (Optional)", text: $description)
                         .font(.subheadline)
+                    
+                    Button(action: {
+                        showDatePicker.toggle()
+                    }) {
+                        HStack {
+                            Text("Due Date")
+                            Spacer()
+                            Text(dateFormatter.string(from: dueDate))
+                                .foregroundColor(.secondary)
+                            Image(systemName: "calendar")
+                                .foregroundColor(.blue)
+                        }
+                    }
+                    
+                    if showDatePicker {
+                        DatePicker("", selection: $dueDate, displayedComponents: [.date])
+                            .datePickerStyle(GraphicalDatePickerStyle())
+                            .frame(maxHeight: 300)
+                    }
                 }
                 
                 Section(header: Text("Choose Color Theme")) {
@@ -462,6 +570,13 @@ struct AddTaskSheetView: View {
                 }
             }
         }
+    }
+    
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        return formatter
     }
 }
 

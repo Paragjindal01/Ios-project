@@ -1,26 +1,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showIntroScreens = true
+
     var body: some View {
-        TabView {
-            TaskListView()
-                .tabItem {
-                    Image(systemName: "list.bullet")
-                    Text("Tasks")
-                }
-
-            AddTaskView()
-                .tabItem {
-                    Image(systemName: "plus.circle")
-                    Text("Add Task")
-                }
-
-            AboutView()
-                .tabItem {
-                    Image(systemName: "info.circle")
-                    Text("About")
-                }
+        NavigationStack {
+            if showIntroScreens {
+                WelcomeScreensView(showIntroScreens: $showIntroScreens)
+            } else {
+                MainTabView()
+            }
         }
-        .accentColor(.blue) 
     }
 }
