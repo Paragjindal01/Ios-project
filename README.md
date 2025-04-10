@@ -262,4 +262,3 @@ class Coordinator: NSObject, GameDelegate {
 5. **Visual Feedback Systems**: Warning indicators for upcoming obstacles
 6. **State Management**: Clean separation between UI state and game logic
 7. **Custom Animations**: Button effects, scrolling road, and transition animations
-8. **Accessibility Considerations**: Support for dark/light mode
