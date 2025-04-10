@@ -100,7 +100,7 @@ Road Runner is an iOS racing game built with SwiftUI and SpriteKit. The player c
 - No external dependencies required
 
 
-# Road Runner - Viva Preparation Guide
+
 
 ## Core Concepts to Understand
 
